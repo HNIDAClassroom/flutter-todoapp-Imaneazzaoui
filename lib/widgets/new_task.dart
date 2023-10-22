@@ -15,6 +15,7 @@ class _NewTaskState extends State<NewTask> {
 
   final _titleController = TextEditingController();
 
+
   @override
   void dispose() {
     _titleController.dispose();
