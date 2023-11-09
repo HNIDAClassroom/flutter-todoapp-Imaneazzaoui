@@ -6,15 +6,16 @@ enum Category { personal, work, shopping, others }
 class Task{
   Task({
     required this.title,
-    required this.description,
-    required this.date,
-    required this.category,
-  }) : id = uuid.v4();
+    this.description,
+    this.date,
+    this.category,
+    this.isDone = false,  }) : id = uuid.v4();
 
   final String id;
-  final String title;
-  final String  description;
-  final DateTime date;
-  final Category category;
+  late final String title;
+  late final /*String*/  description;
+  late final /*DateTime*/ date;
+  late final /*Category*/ category;
+  bool isDone;
 }
 
